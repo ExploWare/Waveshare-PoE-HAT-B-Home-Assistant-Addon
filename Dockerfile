@@ -10,9 +10,11 @@ RUN \
                 py3-pip \
                 py3-numpy \
                 py3-pillow \
-                py3-smbus \
-                py3-rpigpio
+                py3-smbus 
 
 FROM python:3
+RUN pip install rpi.gpio
 COPY . .
+FROM $BUILD_FROM
 CMD python3 ./bin/main.py
+CMD bash
