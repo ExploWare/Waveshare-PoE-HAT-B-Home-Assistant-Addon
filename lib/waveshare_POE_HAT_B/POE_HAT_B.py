@@ -14,12 +14,13 @@ from . import SSD1306
 
 
 show = SSD1306.SSD1306()
-show.Init();
+f = open("/data/options.json", "r")
+config = json.load(f)
+rotate_180 = config["rotate_180"]
+f.close()
+show.Init(rotate=rotate_180);
 dir_path = os.path.dirname(os.path.abspath(__file__))
-
-
 font = ImageFont.truetype(dir_path+'/Courier_New.ttf',13)
-
 image1 = Image.new('1', (show.width, show.height), "WHITE")
 draw = ImageDraw.Draw(image1)
 class POE_HAT_B:
@@ -36,7 +37,7 @@ class POE_HAT_B:
         
     def GET_IP(self):
         s=socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
-        s.connect(('8.8.8.8',80))
+        s.connect(('9.9.9.9',80))
         ip=s.getsockname()[0]
         s.close()
         return ip
