@@ -1,6 +1,5 @@
-This is a 2024 adoption of :
+This is a 2024 adoption of https://github.com/reschix/Waveshare-PoE-HAT-B-Home-Assistant-Addon/
 
-https://github.com/reschix/Waveshare-PoE-HAT-B-Home-Assistant-Addon/blob/main/Dockerfile
 # Waveshare PoE-HAT (B) Home-Assistant Addon
 
 Specifically for this PoE-HAT: https://www.waveshare.com/wiki/PoE_HAT_(B)
