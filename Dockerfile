@@ -2,7 +2,7 @@ ARG BUILD_FROM
 FROM $BUILD_FROM
 
 RUN \
-        apt add --no-cache \
+        apk add --no-cache \
                 python3 \
                 openjpeg \
                 tiff \
