@@ -15,4 +15,4 @@ RUN \
 
 FROM python:3
 COPY . .
-CMD python ./bin/main.py
+CMD python3 ./bin/main.py
