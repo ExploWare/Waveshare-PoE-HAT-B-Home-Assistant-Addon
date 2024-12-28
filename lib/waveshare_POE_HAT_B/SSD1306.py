@@ -35,7 +35,7 @@ class SSD1306(object):
     def __init__(self, width=128, height=32, addr=0x3c):
         self.width = width
         self.height = height
-        self.Column = widthF
+        self.Column = width
         self.Page = int(height/8)
         self.addr = addr
         self.bus = SMBus(1)
@@ -49,7 +49,7 @@ class SSD1306(object):
     def Closebus(self):
         self.bus.close()
 
-    def Init(self,rotate=0):
+    def Init(self,rotate=False):
         self.SendCommand(0xAE)
 
         self.SendCommand(0x40) # set low column address
