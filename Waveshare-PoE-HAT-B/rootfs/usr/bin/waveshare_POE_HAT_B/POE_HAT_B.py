@@ -17,6 +17,10 @@ show = SSD1306.SSD1306()
 f = open("/data/options.json", "r")
 config = json.load(f)
 rotate_180 = config["rotate_180"]
+if rotate_180 == "false" or rotate_180 == False:
+    rotate_180 = False
+else:
+    rotate_180 = True
 f.close()
 show.Init(rotate=rotate_180);
 dir_path = os.path.dirname(os.path.abspath(__file__))

@@ -1,0 +1,8 @@
+# https://developers.home-assistant.io/docs/add-ons/configuration#add-on-dockerfile
+build_from:
+  aarch64: "ghcr.io/home-assistant/aarch64-base:latest"
+labels:
+  org.opencontainers.image.title: "Waveshare PoE hat (B) addon for Fan and Display control"
+  org.opencontainers.image.description: "Automatically update the display and toggle the fan based on reported CPU temperature"
+  org.opencontainers.image.source: "https://github.com/ExploWare/Waveshare-PoE-HAT-B-Home-Assistant-Addon"
+  org.opencontainers.image.licenses: "MIT License"
