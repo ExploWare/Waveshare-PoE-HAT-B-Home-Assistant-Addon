@@ -19,5 +19,8 @@ schema:
   rotate_180: bool
 ports:
   5000/tcp: 5000
+services:
+  poe_hat:
+    description: "PoE HAT (B) Fan and Display"
 #url: "https://github.com/home-assistant/addons-example/tree/main/example"
 #image: "ghcr.io/home-assistant/{arch}-addon-example"
