@@ -1,0 +1,23 @@
+#!/usr/bin/with-contenv bashio
+# ==============================================================================
+# Start the example service
+# s6-overlay docs: https://github.com/just-containers/s6-overlay
+# ==============================================================================
+
+# Add your code here
+
+# Declare variables
+declare message
+declare rotate_180
+declare fan_temp
+
+## Get the 'message' key from the user config options.
+fan_temp=$(bashio::config 'fan_temp')
+rotate_180=$(bashio::config 'rotate_180')
+
+## Print the message the user supplied, defaults to "Hello World..."
+bashio::log.info "${fan_temp:=43}"
+bashio::log.info "${rotate_180:=false}"
+
+## Run your program
+exec /usr/bin/main.py

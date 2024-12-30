@@ -19,3 +19,5 @@ schema:
   rotate_180: bool
 ports:
   5000/tcp: 5000
+#url: "https://github.com/home-assistant/addons-example/tree/main/example"
+#image: "ghcr.io/home-assistant/{arch}-addon-example"
