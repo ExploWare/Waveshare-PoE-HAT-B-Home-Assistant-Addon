@@ -1,5 +1,6 @@
-ARG BUILD_FROM
-FROM $BUILD_FROM
+#ARG BUILD_FROM
+#FROM $BUILD_FROM
+FROM ghcr.io/hassio-addons/base:latest
 
 RUN apk update
 RUN apk add python3 python3-dev openjpeg tiff openblas-dev py3-pip py3-numpy py3-pillow build-base
